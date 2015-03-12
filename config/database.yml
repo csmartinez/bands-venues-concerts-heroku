@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  adapter: postgresql
+  database: bandtrackings_development
+  template: template0
+
+test:
+  adapter: postgresql
+  database: bandtrackings_test
+  template: template0

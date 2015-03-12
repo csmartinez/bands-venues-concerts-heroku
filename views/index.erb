@@ -1,0 +1,18 @@
+<h1><strong>Concert Tracker</strong><small> Start by adding new bands</small></h1>
+  <a href="/addband"><a href="/addband"><button type="button" class="btn btn-danger btn-xs">Add Bands </button></a>
+  <a href="/addvenue"><a href="/addvenue"><button type="button" class="btn btn-primary btn-xs">Add Venues </button></a>
+  <a href="/addconcert"><button type="button" class="btn btn-success btn-xs">Add concerts </button></a>
+
+<div class="venuestotheleft">
+<h2><strong>Upcoming Concerts</strong><small> year-month-day</small></h2>
+
+<ul>
+  <% if @concerts.any?() %>
+  <% @concerts.each() do |concert| %>
+  <li><h4><%= concert.band.bandname.upcase %> @ <%= concert.venue.venuename.upcase %> on <%= concert.concert_date %><h4></li>
+    <% end %>
+    <% else %>
+    <%= "No Events Scheduled" %>
+    <% end %>
+  </ul>
+</div>
